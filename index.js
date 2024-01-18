@@ -5,7 +5,7 @@ const port = 4001;
 
 app.use(express.json());
 
-const pdfLink = 'https://www.seiinteligencia.com.br/grupo-sei-politica-de-privacidade-lgpd.pdf';
+const pdfLink = 'https://drive.google.com/file/d/1c5AN_0qgBE-k0-morvwxmPF_ATKqgT0P/view?usp=sharing';
 
 app.get('/pdfDoc', (req, res) => {
     res.json({title: "Segue o link do PDF:", link: pdfLink});
