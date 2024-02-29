@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../conf/sequelize');
 
-const Usuario = sequelize.define('Usuario', {
-  name: {
+const User = sequelize.define('User', {
+  username: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -14,6 +14,12 @@ const Usuario = sequelize.define('Usuario', {
       isEmail: true,
     },
   },
+  phone: {
+    type: DataTypes.STRING,
+    validate: {
+      is: /^\+(?:[0-9] ?){6,14}[0-9]$/,
+    },
+  },
 });
 
-module.exports = Usuario;
+module.exports = User;
