@@ -1,17 +1,17 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../conf/sequelize');
 
-const User = sequelize.define('User', {
-  username: {
+const UserInstace = sequelize.define('UserInstace', {
+  remoteJid: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  phone: {
+  pushName: {
     type: DataTypes.STRING,
   },
-  state: {
+  instanceName: {
     type: DataTypes.STRING
   },
 });
 
-module.exports = User;
+module.exports = UserInstace;
